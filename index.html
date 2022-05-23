@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Sensorium</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>DATA SENSORIUM DASHBOARD</h1>
+      <h3>Population displacements caused by environmental disasters (2008-2020)</h3>
+      <h3>🌏 <span id="category"></span></h3> <!-- set up in choreoA.js -->
+      <!--      <h3 id="choice"></h3>-->
+    </div>
+  </div>
+
+  <div class="row chart">
+    <div class="col">
+      <h3 class="title">Logarithmic Ring Chart</h3>
+      <div id="choreoB"></div>
+    </div>
+    <div class="col">
+      <h3 id="time" class="title"></h3> <!-- set up in main.js -->
+      <table class = "score" id = "choreoATable">
+        <tbody>
+        <tr>
+          <td></td>
+          <th class = "header">Disaster</th>
+          <th class = "header">Reps:</th>
+          <th class = "header">(Frequencies)</th>
+          <th class = "header">Steps:</th>
+          <th class = "header">(Displacements)</th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "a0"></th>
+          <th id = "a1"></th>
+          <th id = "a2"></th>
+          <th id = "a3"></th>
+          <th id = "a4"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "b0"></th>
+          <th id = "b1"></th>
+          <th id = "b2"></th>
+          <th id = "b3"></th>
+          <th id = "b4"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "c0"></th>
+          <th id = "c1"></th>
+          <th id = "c2"></th>
+          <th id = "c3"></th>
+          <th id = "c4"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "d0"></th>
+          <th id = "d1"></th>
+          <th id = "d2"></th>
+          <th id = "d3"></th>
+          <th id = "d4"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "e0"></th>
+          <th id = "e1"></th>
+          <th id = "e2"></th>
+          <th id = "e3"></th>
+          <th id = "e4"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "f0"></th>
+          <th id = "f1"></th>
+          <th id = "f2"></th>
+          <th id = "f3"></th>
+          <th id = "f4"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "g0"></th>
+          <th id = "g1"></th>
+          <th id = "g2"></th>
+          <th id = "g3"></th>
+          <th id = "g4"></th>
+        </tr>
+        <tr>
+          <td></td>
+          <th id = "h0"></th>
+          <th id = "h1"></th>
+          <th id = "h2"></th>
+          <th id = "h3"></th>
+          <th id = "h4"></th>
+        </tr>
+        </tbody>
+      </table>
+      <h2>In both visualizations, thickness represents population displacement, colors encode the disaster types, and color opacity represents disaster frequency. The stacked area chart uses actual values, whereas the ring chart uses logarithmic ones. The stacked area chart informed the choreography, whereas the choreography informed the ring chart. The logarithmic movement score reflects the choreographic structure.</h2>
+    </div>
+  </div>
+
+  <div class="row chart">
+    <div class="col-md-6">
+      <h3 class="title">Stacked Area Chart</h3>
+      <div id="choreoA"></div>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+
+</div>
+
+<!-- Load JS libraries -->
+<script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/d3-tip.js"></script>
+<script src="js/lodash.js"></script>
+
+<!-- Load visualization scripts -->
+<script src="js/main.js"></script>
+<script src="js/choreoA.js"></script>
+<script src="js/choreoB.js"></script>
+<script src="js/colorLegend.js"></script>
+
+</body>
+
+</html>
