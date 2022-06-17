@@ -1,13 +1,13 @@
 // SVG drawing area
-var marginChoreoA = {top: 60, right: 30, bottom: 0, left: 100};
-var widthChoreoA = 1000 - marginChoreoA.left - marginChoreoA.right;
-var heightChoreoA = 500 - marginChoreoA.top - marginChoreoA.bottom;
+var marginChoreoA = {top: 60, right: 0, bottom: 0, left: 100};
+var widthChoreoA = 670 - marginChoreoA.left - marginChoreoA.right;
+var heightChoreoA = 400 - marginChoreoA.top - marginChoreoA.bottom;
 
 var svgChoreoA = d3.select("#choreoA").append("svg")
-    .attr("width", widthChoreoA)
-    .attr("height", heightChoreoA)
-//     .attr("viewBox", "0 0 " + (widthChoreoA + marginChoreoA.left + marginChoreoA.right) + " " +
-//         (heightChoreoA + marginChoreoA.top + marginChoreoA.bottom) + "")
+//     .attr("width", widthChoreoA)
+//     .attr("height", heightChoreoA)
+    .attr("viewBox", "0 0 " + (widthChoreoA + marginChoreoA.left + marginChoreoA.right) + " " +
+        (heightChoreoA + marginChoreoA.top + marginChoreoA.bottom) + "")
     .append("g")
     .attr("class", "chart")
     .attr("transform", "translate(" + marginChoreoA.left + "," + marginChoreoA.top + ")");
@@ -47,7 +47,7 @@ gyAxisA.append("text")
     .attr("class", "y-axis axes label")
     .style("text-anchor", "end")
     .attr("transform", "translate(-85, -35)rotate(-90)")
-    .text("<< Displacements <<");
+    .text("<< Internal displacements <<");
 
 var dur = 0; // Duration of transitions
 
@@ -109,7 +109,7 @@ function choreoA(place, span) {
                     )
             .style("fill", function(d) {
                 if (colorMapRed[d.key] === undefined) {
-                    return "#bfbfbf"; // match to .chart background in style.css
+                    return "white"; // match to .chart background in style.css.
                 }
                 else {
                     return colorMapRed[d.key];

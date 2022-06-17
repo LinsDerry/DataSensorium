@@ -1,14 +1,15 @@
 body {
-  font-family: "Courier New", monospace;
+  /*font-family: "Courier New", monospace;*/
+  font-family: "DIN Alternate";
   color: #343a40;
   text-align: center;
-  background: #bfbfbf;
+  background: white; /* #F8F8F8; #bfbfbf; */
 }
 
 .chart {
   padding: 2px;
   margin: 2px;
-  background: #bfbfbf;
+  background: white; /* #F8F8F8; #bfbfbf; */
   text-align: left;
 }
 #choreoB {
@@ -24,78 +25,66 @@ body {
   stroke-width: 0.5;
 }
 .axes text {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 200;
   fill: black;
 }
 .axes.label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 200;
   font-style: italic;
   letter-spacing: 0.03em;
 }
 h1, h2, h3 {
-  color: black;
-  font-weight: 200;
+  color: #1F1F1F;
+  /*font-weight: 200;*/
   margin: 2px;
   padding: 2px;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
 h1 {
-  margin-top: 25px;
+  margin: 35px 0 20px 0;
   padding: 2px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
 }
 h2 {
-  font-size: 15px;
+  font-size: 12px;
   text-align: justify;
+}
+#category {
+  text-transform: uppercase;
 }
 .title {
   text-decoration: underline;
 }
 
 #choice {
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
 }
 /* TABLE */
 table {
-  background: #bfbfbf;
+  background: white; /* #F8F8F8; #bfbfbf; */
   margin: 25px 0 50px 0;
   letter-spacing: 0.1em;
   overflow: hidden;
   width: 100%;
   text-align: left;
-  font-size: 13px;
+  font-size: 10px;
   text-transform: uppercase;
 }
 th {
   font-weight: bold;
   margin: 2px;
-  padding: 3px;
+  padding: 6px;
 }
 .header {
-  font-weight: bold;
+  font-weight: bolder;
   color: black;
 }
 
 /* TABLE END */
-
-/* Tooltips. Not in use now. */
-.d3-tip {
-  position: absolute;
-  text-align: center;
-  font-size: 12px;
-  color: black;
-  width: 150px;
-  height: auto;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.8);
-  border: 0;
-  border-radius: 8px;
-  pointer-events: none;
-}

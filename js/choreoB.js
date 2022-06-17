@@ -1,13 +1,13 @@
 // SVG drawing area
 var marginChoreoB = {top: 10, right: 10, bottom: 10, left: 10};
-var widthChoreoB = 1000 - marginChoreoB.left - marginChoreoB.right;
-var heightChoreoB = 500 - marginChoreoB.top - marginChoreoB.bottom;
+var widthChoreoB = 670 - marginChoreoB.left - marginChoreoB.right;
+var heightChoreoB = 335 - marginChoreoB.top - marginChoreoB.bottom;
 
 var svgChoreoB = d3.select("#choreoB").append("svg")
-    .attr("width", widthChoreoB)
-    .attr("height", heightChoreoB)
-    // .attr("viewBox", "0 0 " + (widthChoreoB + marginChoreoB.left + marginChoreoB.right) + " " +
-    //     (heightChoreoB + marginChoreoB.top + marginChoreoB.bottom) + "")
+    // .attr("width", widthChoreoB)
+    // .attr("height", heightChoreoB)
+    .attr("viewBox", "0 0 " + (widthChoreoB + marginChoreoB.left + marginChoreoB.right) + " " +
+        (heightChoreoB + marginChoreoB.top + marginChoreoB.bottom) + "")
     .append("g")
     .attr("class", "chart")
     .attr("transform", "translate(" + marginChoreoB.left + "," + marginChoreoB.top + ")");
@@ -21,7 +21,7 @@ var textChoreoB = svgChoreoB.append("g")
 var stepDis = 0;
 var inRadius = 0;
 var outRadius = 0;
-var fade = 0.05; // opacity for out-of-focus rings and layers
+var fade = 0.10; // opacity for out-of-focus rings and layers
 
 function choreoB(index, show) {
 
@@ -112,7 +112,7 @@ function choreoB(index, show) {
                     return d.data.fill;
                 }
                 else if (d.data.index === index) { // hide other disasters in current year
-                    return "#bfbfbf"; // match to .chart background in style.css
+                    return "white"; // match to .chart background in style.css
                 }
                 else { // leave previous rings/years visible
                     return d.data.fill;
@@ -120,7 +120,7 @@ function choreoB(index, show) {
             })
             .style("opacity", function (d) {
                 // see comments above (same logic pattern)
-                if (hazardTypesRed.includes(d.data.hazType) === show && d.data.index === index) {
+                if (hazardTypesRed.includes(d.data.hazType) && d.data.index === index) {
                     return d.data.opacity;
                 }
                 else if (d.data.index === index) {

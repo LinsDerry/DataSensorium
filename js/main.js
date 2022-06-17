@@ -112,6 +112,8 @@ function setupData(error, data1, data2) {
     // topPlaces = explore(geos.subRegions, "subregions", 10); // Western Asia
     topPlaces = explore(countries, "countries", 10); // United States and Indonesia
 
+    console.log("draw me");
+
     // Draw the visualization for the first time and set choreography score
     score = choreoScore(topPlaces.places[0]);
     printScore(0);
@@ -512,16 +514,30 @@ function explore(places, name, max) {
 /* disasterColorKey returns a map where the key is the hazard type and the value, an arbitrarily assigned color. */
 function disasterColorKey() {
     var map = [];
-    map["Flood"] = "#2a3b90"; //"#223075"
-    map["Storm"] = "#63808F";
-    map["Wildfire"] = "#7D0B13";
-    map["Earthquake"] = "#817C8A";
-    map["Volcano"] = "#FF4B0A"; //"#FC1726";
-    map["Drought"] = "#D6D2CE";
-    map["Massmovement"] = "#735937"; //"#8F7B63";
-    map["Extremetemperature"] = "#E6FF96";
+
+    // map["Flood"] = "#2a3b90";
+    // map["Storm"] = "#63808F";
+    // map["Wildfire"] = "#990E17"; //"#7D0B13";
+    // map["Earthquake"] = "#204e49"; // "#817C8A";
+    // map["Volcano"] = "#FF4B0A";
+    // map["Drought"] = "#817C8A"; // "#D6D2CE";
+    // map["Massmovement"] = "#735937";
+    // map["Extremetemperature"] = "#ac128f"; // "#E6FF96";
+    // map["Severewintercondition"] = "#FFFFFF";
+    // map["unknown"] = "#000000";
+
+    map["Flood"] = "#285D82";
+    map["Storm"] = "#93A7B5";
+    map["Wildfire"] = "#822A28";
+    map["Earthquake"] = "#204F4A";
+    map["Volcano"] = "#F02D3A";
+    map["Drought"] = "#817C8A";
+    map["Massmovement"] = "#5C423D";
+    map["Extremetemperature"] = "#4FC2B6";
     map["Severewintercondition"] = "#FFFFFF";
     map["unknown"] = "#000000";
+
+
 
     return map;
 }
