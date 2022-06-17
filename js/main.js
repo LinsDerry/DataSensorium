@@ -108,9 +108,9 @@ function setupData(error, data1, data2) {
     colorMapRed = colorMap;
 
     // Populate topPlaces with either countries, regions, or subregions data
-    // topPlaces = explore(geos.regions, "regions", 5); //Americas '08-'10
+    topPlaces = explore(geos.regions, "regions", 5); //Americas '08-'10
     // topPlaces = explore(geos.subRegions, "subregions", 10); // Western Asia
-    topPlaces = explore(countries, "countries", 10); // United States and Indonesia
+//     topPlaces = explore(countries, "countries", 10); // United States and Indonesia
 
     console.log("draw me");
 
