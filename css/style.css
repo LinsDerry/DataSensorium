@@ -25,12 +25,12 @@ body {
   stroke-width: 0.5;
 }
 .axes text {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 200;
   fill: black;
 }
 .axes.label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
   font-style: italic;
   letter-spacing: 0.03em;
@@ -40,7 +40,7 @@ h1, h2, h3 {
   /*font-weight: 200;*/
   margin: 2px;
   padding: 2px;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   line-height: 1.5;
   letter-spacing: 0.03em;
@@ -49,10 +49,10 @@ h1 {
   margin: 35px 0 20px 0;
   padding: 2px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
 }
 h2 {
-  font-size: 12px;
+  font-size: 20px;
   text-align: justify;
 }
 #category {
@@ -74,7 +74,7 @@ table {
   overflow: hidden;
   width: 100%;
   text-align: left;
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 th {

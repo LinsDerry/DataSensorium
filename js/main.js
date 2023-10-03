@@ -108,11 +108,9 @@ function setupData(error, data1, data2) {
     colorMapRed = colorMap;
 
     // Populate topPlaces with either countries, regions, or subregions data
-    topPlaces = explore(geos.regions, "regions", 5); //Americas '08-'10
+    // topPlaces = explore(geos.regions, "regions", 5); //Americas '08-'10
     // topPlaces = explore(geos.subRegions, "subregions", 10); // Western Asia
-//     topPlaces = explore(countries, "countries", 10); // United States and Indonesia
-
-    console.log("draw me");
+    topPlaces = explore(countries, "countries", 10); // United States and Indonesia
 
     // Draw the visualization for the first time and set choreography score
     score = choreoScore(topPlaces.places[0]);
@@ -213,7 +211,7 @@ function structureYears(country_) {
     var yearsObj = [];
 
     /* IMPORTANT - make sure span of years matches 'idmc_disaster.csv' span, 2008-2020. */
-    for (var i = 2008; i < 2021; i++) {
+    for (var i = 2008; i < 2021; i++) { //adjusted for 2008-2020
         var obj = {};
         obj.year = i;
 
@@ -494,12 +492,12 @@ function explore(places, name, max) {
     var topHazTypes = mapsToArr("haz", topYrs, "years");
 
     /* Print to console for analysis */
-    // console.log("Top " + topPlaces.length + " " + name + " with greatest displacements (2008-2020):")
-    // console.log(topPlaces);
-    // console.log("Hazard categories sorted descending for top " + topPlaces.length + " " + name + ":")
-    // console.log(topHazCategories);
-    // console.log("Hazard types sorted descending for top " + topPlaces.length + " " + name + ":")
-    // console.log(topHazTypes);
+    console.log("Top " + topPlaces.length + " " + name + " with greatest displacements (2008-2020):")
+    console.log(topPlaces);
+    console.log("Hazard categories sorted descending for top " + topPlaces.length + " " + name + ":")
+    console.log(topHazCategories);
+    console.log("Hazard types sorted descending for top " + topPlaces.length + " " + name + ":")
+    console.log(topHazTypes);
 
     var obj = {
         category: category,
@@ -835,6 +833,8 @@ function choreoScore(place) {
         return a.year - b.year;
     });
 
+    console.log(years);
+
     return years;
 }
 
@@ -907,6 +907,7 @@ function printScore(index) {
             id = id.slice(0, (id.length - 1));
         }
         document.getElementById("time").innerHTML = score[index].year + " Logarithmic Movement Score";
+
 
         //Remove any remaining text from score table in 'index.html' not replaced above
         for (var k = 0; k < alphabet.length; k++) {
